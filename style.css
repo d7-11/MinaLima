@@ -1,0 +1,125 @@
+ body {
+            font-family: brandon-grotesque, sans-serif;
+            font-style: normal;
+            margin: 0;
+        }
+
+        header {
+            color: #3a0200;
+            text-align: center;
+            background-color: #f4d58d;
+            border-radius: 10px;
+        }
+
+        .container {
+            display: flex;
+            margin: 10px;
+        }
+
+        .left-column {
+            padding: 20px;
+            background-color: #ffecd1;
+            border: 2px solid #3a0200;
+            border-radius: 10px;
+            width: 70%;
+        }
+
+        .right-column {
+            padding: 20px;
+            background-color: lightslategray;
+            border: 2px solid #3a0200;
+            border-radius: 10px;
+            width: 30%;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.5;
+            color: rgb(68, 52, 52);
+            font-weight: 400;
+        }
+
+        nav {
+            font-size: 1.5em;
+            display: flex;
+            justify-content: space-between;
+            margin: 5px auto;
+            background-color: #3a0200;
+            padding: 10px;
+            border: 2px solid lightslategray;
+            border-radius: 10px;
+        }
+
+        ul,
+        li {
+            margin: auto;
+            list-style-type: none;
+            color: #af945c;
+        }
+
+        nav ul {
+            flex: 1;
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+
+        li:hover {
+            background-color: #eae0d5;
+            border-radius: 3px;
+        }
+
+        img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 60%;
+        }
+
+        #burger-menu-icon {
+            display: none;
+            /* Hide the icon by default for larger screens */
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .bar {
+            width: 25px;
+            height: 3px;
+            background-color: #fff;
+            margin: 3px 0;
+            border-radius: 2px;
+        }
+
+        /* Media queries */
+
+        @media (max-width: 768px) {
+
+            /* Hide regular navigation links */
+            nav ul:not(.active) {
+                display: none;
+            }
+
+            /* Display the burger menu icon */
+            #burger-menu-icon {
+                display: flex;
+            }
+
+            /* Initially hide the menu */
+            nav ul {
+                display: none;
+            }
+
+            /* Show the menu when 'active' class is applied */
+            nav ul.active {
+                display: flex !important;
+                /* Use !important to ensure specificity */
+            }
+        }
+
+        #colorDisplay {
+            width: 100px;
+            height: 100px;
+            margin: 20px auto;
+            transition: background-color 1s ease-in-out;
+        }
